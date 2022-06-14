@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Tarot_Reader___Side_project</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Minor Arcana\Pentacles\" />
+  </ItemGroup>
+
+</Project>
