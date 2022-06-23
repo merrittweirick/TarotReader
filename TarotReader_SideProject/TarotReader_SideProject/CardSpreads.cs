@@ -8,13 +8,33 @@ namespace TarotReader_SideProject
 {
     public class CardSpreads
     {
+        List<Card> deck = new List<Card>();
         public CardSpreads()
         {
 
         }
-
-        public List<Card> ShuffleDeck(List<Card> deck)
+        public bool BuildDeck(Card cardToAdd)
         {
+            foreach(Card storedCard in deck)
+            {
+                if(storedCard.Name.Contains(cardToAdd.Name))
+                {
+
+                }
+                else
+                {
+                    deck.Add(cardToAdd);
+                }
+            }
+            return true;
+        }
+        public List<Card> GetDeck()
+        {
+            return deck;
+        }
+        public List<Card> ShuffleDeck()
+        {
+            
             var rnd = new Random();
 
             deck = deck.OrderBy(card => rnd.Next()).ToList();
@@ -32,7 +52,7 @@ namespace TarotReader_SideProject
             return deck;
         }
 
-        public string ThreeCardSpread(List<Card> deck)
+        public List<string> ThreeCardSpread(List<Card> deck)
         {
             List<Card> threeCardDeck = deck.GetRange(0, 3); //Basically creates "substring" of deck list (should create list o first three indexes in Deck)
             List<string> threeSpreadReading = new List<string>(); 
