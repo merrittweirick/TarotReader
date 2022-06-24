@@ -8,32 +8,18 @@ namespace TarotReader_SideProject
 {
     public class CardSpreads
     {
-        List<Card> deck = new List<Card>();
+                                                 //hey if i wanted to add all my classes to a list that i can use in my program's methods
+                                                                                    // but like want to add them as I go...is there a faster way than just adding each class manually?
+                                                                                    // like could I do a foreach over  a parent class and add all its children?
         public CardSpreads()
         {
 
         }
-        public bool BuildDeck(Card cardToAdd)
+        
+       
+        public List<Card> ShuffleDeck(List<Card> deck)
         {
-            foreach(Card storedCard in deck)
-            {
-                if(storedCard.Name.Contains(cardToAdd.Name))
-                {
-
-                }
-                else
-                {
-                    deck.Add(cardToAdd);
-                }
-            }
-            return true;
-        }
-        public List<Card> GetDeck()
-        {
-            return deck;
-        }
-        public List<Card> ShuffleDeck()
-        {
+            
             
             var rnd = new Random();
 

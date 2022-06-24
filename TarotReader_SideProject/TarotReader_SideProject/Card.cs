@@ -13,11 +13,18 @@ namespace TarotReader_SideProject
             this.Name = name.ToUpper();
 
         }
-
-        public string Arcana { get; }
-        public int CardNumber { get; }
-        public string Name { get; }
+        public int CardID { get; set; }
+        public string Arcana { get; set; }
+        public int CardNumber { get; set; }
+        public string Name { get; set; }
 
         public bool Reversed { get; set; } = false;
+
+        public string SituationMeaning { get; set; }
+
+        public string ObstacleMeaning { get; set; }
+
+        public string AdviceMeaning { get; set; }
+
     }
 }
