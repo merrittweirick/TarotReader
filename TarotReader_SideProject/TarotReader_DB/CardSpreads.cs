@@ -26,7 +26,7 @@ namespace TarotReader_SideProject
             deck = deck.OrderBy(card => rnd.Next()).ToList();
             foreach (Card card in deck)
             {
-                if(rnd.Next(2)==0)
+                if(rnd.Next(2)==0
                 {
                     card.Reversed = true;
                 }

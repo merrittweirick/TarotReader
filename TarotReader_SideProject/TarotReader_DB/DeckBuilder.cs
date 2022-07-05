@@ -4,9 +4,9 @@ using System.Text;
 
 namespace TarotReader_SideProject
 {
-    public class DeckBuilder
+    public class Deck
     {
-        public DeckBuilder() { }
+        public Deck() { }
 
         List<Card> deck = new List<Card>();
         public bool BuildDeck(Card cardToAdd)
