@@ -2,25 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
+
 
 namespace TarotReaderServer.Models
 {
     public class Card
     {
-        public int Id { get; set; }
-
-        public string Card_name { get; set; }
-
+        public int CardId { get; set; }
+        public string Name { get; set; }
         public string Arcana { get; set; }
-
-        public bool Reversed { get; set; } = false;
-
-        public string Situation_meaning { get; set; }
-        public string Situation_meaning_rev { get; set; }
-        public string Obstacle_meaning { get; set; }
-        public string Obstacle_meaning_rev { get; set; }
-        public string Advice_meaning { get; set; }
-        public string Advice_meaning_rev { get; set; }
+        public string As_situation { get; set; }
+        public string As_situation_rev { get; set; }
+        public string As_obstacle { get; set; }
+        public string As_obstacle_rev { get; set; }
+        public string As_advice { get; set; }
+        public string As_advice_rev { get; set; }
     }
 }

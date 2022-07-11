@@ -12,7 +12,7 @@ go
 
 Begin Transaction
 
-create table Cards (
+create table Card (
 	id int identity(1,1) primary key,
 	name nvarchar (100) NOT NULL,
 	arcana nvarchar(20) NOT NULL,
@@ -29,32 +29,91 @@ GO
 
 
 
-insert into Cards(name, arcana,
+insert into Card(name, arcana,
 				as_situation, as_situation_rev,
 				as_obstacle, as_obstacle_rev,
 				as_advice, as_advice_rev)
 values
 					('The Fool', 'Major',
-/*situation*/		'',
-/*situation_rev*/	'',
-/*obstacle*/		'',
-/*obstacle_rev*/	'',
-/*advice*/			'',
-/*advice_rev*/		''),
+/*situation*/		
+'The Fool is a card of new beginnings, opportunity and potential. You are at the start of your journey, 
+standing at the cliff‘s edge, and about to take your first step into the unknown.',
+/*situation_rev*/	
+'The Fool Reversed suggests that you have conceived of a new project but aren’t ready to ‘birth’ it into the world just yet.
+You may choose to keep this new opportunity to yourself for now, or you might be ‘parking’ it until a better time.',
+/*obstacle*/		
+'You might be struggling with dread, worry or self-doubt in your life, maybe even too scared about unknown
+factors you canot see. But life is not about knowing what comes next, no one can know anything with 100% certainty, 
+and that''s ok it''s not our job to know.',
+/*obstacle_rev*/	
+'The Fool reversed may suggest that you may hit a standstill in a new adventure or journey, this might be due to fear
+of the unknown, frozen in place rather than continuing on your journey. On the flispside, may also suggest that you''re 
+taking TOO many risks right now and not holding enough regard to the consequences of your actions and their effects on you
+or others around you.',
+/*advice*/			
+'The fool asks you to embrace your carefree spirit. Relax, play, and have fun! If you''re hesitant about starting 
+on a new journey the Fool encourages you to take that leap of faith. You don’t need to wait for someone to give you 
+the green light or hold off until you have all the skills, tools and resources you think you might need. 
+You are ready! If you’ve been watching for a sign, this is it!',
+/*advice_rev*/		
+'The Fool reversed suggests that you should release the need for control. Trust the universe has your back so that you can move forward
+with confidence in your decision while staying mindful of the bigger picture. Allow this trust to open you to your more playful side and 
+embrace a sense of wonder as you explore the new opportunities ahead.'),
+		
 		('The Magician', 'Major',
-/*situation*/		'',
-/*situation_rev*/	'',
-/*obstacle*/		'',
-/*obstacle_rev*/	'',
-/*advice*/			'',
-/*advice_rev*/		''),
+/*situation*/		
+'The Magician upright means the world is at your fingertips right now. The elements of the universe are offering all the potential you could
+ever want to manifest your dreams. You may have recently concieved an idea or project your want to bring to life, this card says the time is 
+now to start making moves as long as you have a clear vision of your goals and intentions with them.',
+/*situation_rev*/	
+'The Magician Reversed shows you are exploring what you wish to manifest, but you are not taking action yet. You are uncertain if you have 
+everything you need and may be unsure about how to make it happen. If you are already acting on your goal, The Magician Reversed can be a 
+sign that you are struggling to see progress or success. In it''s worse case scenario you may be acting from a lower vibration, enacting your
+will or manifesting from a place of self interest, potentially at the expense of others.',
+/*obstacle*/		
+'Not so much an obstacle as it is a warning, the Magician upright advises you to avoid ego-driven motivations. Manifesting goals from a place
+of lower vibrations may create problems for you or your goals later on or may result in the opposite result which you wish to achieve. The Magician
+appears when we need a grounding check. Maybe your "best intentions" aren''t coming from where you think they are, check in with yourself and 
+make sure you''re operating from your soul''s place of love.',
+/*obstacle_rev*/	
+'If your goals might seem to be frozen in their trajectory or something about their progression may seem ‘off’, this may be due to you acting
+solely for your own benefit. You might also be feeling unfocused or unclear about the "why" of your efforts and may now be lacking the motivation
+to see them through. You have lost touch with your highest alignment and the Magician reversed is your bright red "TURN AROUND" sign on the side of 
+the road of your journey.',
+/*advice*/			
+'The Magician upright tells us that to achieve our highest goals we must do so using a soul-connection and clear vision. Focus on one thing at a time
+and make space for serious commitment. In order to accomplish what you want the Magician asks you to drop any distractions that might break your 
+concentration. Take some time to methodically plan your tasks and see them to completion.',
+/*advice_rev*/		
+'The Magician Reversed shows that you have many skills, talents, and capabilities, but your real potential is not being maximized. You may realize 
+that you have so much more to give.If you take care of what you intend to manifest, the Universe will work out the how. Stay attuned to your 
+intuition and pay attention to opportunities as they arise. '),
+		
 		('The High Priestess','Major',
-/*situation*/		'',
-/*situation_rev*/	'',
-/*obstacle*/		'',
-/*obstacle_rev*/	'',
-/*advice*/			'',
-/*advice_rev*/		''),
+/*situation*/		
+'The High Priestess signifies spiritual enlightenment, inner illumination, divine knowledge and wisdom. She shows up in your Tarot readings when 
+the veil between you and the underworld is thin, and you have the opportunity to access the knowledge deep within your soul.',
+/*situation_rev*/	
+'You might be struggling to connect to your intuition right now for fear of feeling "silly" or doubting it''s validity. The struggle to connect 
+might also be caused by your fear of other peoples opinions or judgements of you.',
+/*obstacle*/		
+'The High Priestess shows up in a reading when there are areas in your life that may be out of balance or lacking ‘flow’ and ease. You might be
+resisting her call to open yourself to your intuition, causing a blockage or disjointed energy in your life. Do not resist the call, the divine 
+masculine is what many of us have come to know as the only way to live our lives. Linear, structured, sensible. However, life is all about balance.
+You might be ignoring the Divine Feminine, but chaos, flow, and creation are just as much an essential part of the universe as their masculine
+counterpart. One without the other leads to imbalance.',
+/*obstacle_rev*/	
+'Your outside world might be overly structured staunching any sense of creativity or freedom. On the flipside, your world might also be submerged 
+in complete chaos right now without lacking structure or identifiable path. It''s hard to see the path when you''re caught in the winds of the storm.
+Imbalance in shrouding your way making it hard to see clearly where your headed or even where you are.',
+/*advice*/			
+'The High Priestess is a signal that you are being called to embrace the Divine Feminine – your connection to your intuition, compassion, empathy, 
+and inner wisdom. Regardless of your gender, it is vital for you to balance and integrate your masculine and feminine energies, and the presence of
+The High Priestess signals that your sacred feminine needs your attention right now. Feel, rather than think. Collaborate, rather than compete. 
+Create, rather than destroy. Trust your Divine Feminine energy, even if the masculine energy around you may appear to be stronger.',
+/*advice_rev*/		
+'The High Priestess Reversed calls on you to be still and direct your attention inward to listen to your voice and wisdom. It is time to get quiet 
+and withdraw yourself from the external world to observe what your inner guidance is sharing with you now.'),
 		('The Empress','Major',
 /*situation*/		'',
 /*situation_rev*/	'',
@@ -588,6 +647,50 @@ values
 /*advice_rev*/		'');
 
 Go
+
+create table Deck(
+	id int identity (1,1) primary key,
+	dealt bit
+	);
+GO
+insert into Deck(dealt)
+Values(0);
+Go
+
+create table Card_Deck (
+	deck_id int,
+	card_id int,
+
+	Constraint PK_card_deck primary key(deck_id,card_id),
+	Constraint FK_deck_id foreign key (deck_id) references Deck(id),
+	Constraint FK_card_id foreign key (card_id) references Card(id)
+	);
+GO
+
+create table Spread(
+	id int identity(1,1) primary key,
+	deck_id int,
+	name nvarchar (50) Not Null,
+
+	Constraint FK_deck_spread foreign  key (deck_id) references Deck(id)
+	);
+GO
+Insert into Spread (name)
+Values('Three Card Spread');
+Go
+
+create table Card_Spread(
+	card_id int,
+	spread_id int,
+	reversed bit,
+	placement_number int,
+
+	Constraint PK_constraint_spread primary key (card_id, spread_id),
+	Constraint FK_card_spread foreign key (card_id) references Card(id),
+	Constraint FK_spread_id foreign key (spread_id) references Spread(id)
+	);
+GO
+
 
 
 

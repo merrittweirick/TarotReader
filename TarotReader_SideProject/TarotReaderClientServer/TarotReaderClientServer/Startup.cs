@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TarotReaderServer.DAOs;
+
 
 namespace TarotReaderClientServer
 {
@@ -26,6 +28,10 @@ namespace TarotReaderClientServer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            string connectionString = Configuration.GetConnectionString("TarotReader");
+            services.AddSingleton<ICardDAO>(ignore => new CardDAO(connectionString));
+            //services.AddSingleton<ISpreadDAO>(ignore => new SpreadDAO(connectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
